@@ -16,6 +16,7 @@ Step 3 id
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md#jinja2---remote-command-execution
 ```
 นี่คือลิงก์เกี่ยวกับ Server Side Template Injection
+
 3.1 ไปที่ Personal Info และไปที่ Full Name เปลี่ยนข้อมูลจาก
 ```
 {{7*7}}
